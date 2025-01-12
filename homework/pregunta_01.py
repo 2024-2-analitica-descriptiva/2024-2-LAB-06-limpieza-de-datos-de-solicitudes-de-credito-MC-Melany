@@ -1,7 +1,8 @@
 """
 Escriba el codigo que ejecute la accion solicitada en la pregunta.
 """
-
+import pandas as pd
+import os
 
 def pregunta_01():
     """
@@ -13,10 +14,6 @@ def pregunta_01():
     El archivo limpio debe escribirse en "files/output/solicitudes_de_credito.csv"
 
     """
-import pandas as pd
-import os
-
-def pregunta_01():
     # Cargar datos
     file_path = 'files\\input\\solicitudes_de_credito.csv'  # Ruta del archivo CSV original.
     data = pd.read_csv(file_path, sep=';')  # Lee el archivo CSV, usando el separador ';'.
@@ -58,4 +55,4 @@ def pregunta_01():
 
 # Llamar a la función
 df_limpio = pregunta_01()
-
+print(df_limpio.head())
