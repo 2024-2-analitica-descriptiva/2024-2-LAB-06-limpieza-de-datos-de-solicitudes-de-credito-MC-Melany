@@ -15,7 +15,7 @@ def pregunta_01():
 
     """
     # Cargar datos
-    file_path = 'files\\input\\solicitudes_de_credito.csv'  # Ruta del archivo CSV original.
+    file_path = 'files/input/solicitudes_de_credito.csv'  # Ruta del archivo CSV original.
     data = pd.read_csv(file_path, sep=';')  # Lee el archivo CSV, usando el separador ';'.
 
     # Limpieza inicial del DataFrame
@@ -44,11 +44,11 @@ def pregunta_01():
     data.drop_duplicates(inplace=True)
 
     # Crear directorio de salida si no existe
-    output_dir = 'files\\output'  # Define la carpeta de salida
+    output_dir = 'files/output'  # Define la carpeta de salida
     os.makedirs(output_dir, exist_ok=True)  # Crea la carpeta si no existe.
 
     # Guardar el DataFrame limpio en un nuevo archivo CSV
-    output_path = f'{output_dir}\\solicitudes_de_credito.csv'
+    output_path = f'{output_dir}/solicitudes_de_credito.csv'
     data.to_csv(output_path, sep=';', index=False)  # Guarda el DataFrame como CSV.
 
     return data.head()
